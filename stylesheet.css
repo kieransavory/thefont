@@ -8,6 +8,7 @@
 
 body{
     background-color: black;
+    user-select: none;
 }
 
 /* FLASH PHOTOGRAPHY WARNING - IMPORTANT. */
@@ -86,6 +87,7 @@ body{
 }
 
 .herovideo.active{
+    animation: fadeIn 1s;
     transition: all 0.5s;
     display: flex;
 }
@@ -110,6 +112,7 @@ body{
 }
 
 .heroimgdiv.active{
+    animation: fadeIn 1s;
     display: flex;
 }
 
@@ -134,9 +137,34 @@ body{
 
 .navbar img:hover{
     transition: all 0.5s;
-    transform: scale(1.075);
+    transform: scale(1.025);
     cursor: pointer;
+}
 
+.hamburger{
+    transition: all 0.5s;
+    width: 2.75%;
+    height: 30%;
+    position: absolute;
+    right: 0px; 
+    top: 0px;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.hamburger:hover{
+    transition: all 0.5s;
+    cursor: pointer;
+    opacity: .5;
+}
+
+.bar{
+    width: 100%;
+    height: 20%;
+    border-radius: 2%;
+    background-color: whitesmoke;
 }
 
 
@@ -160,8 +188,17 @@ body{
         object-position: center;
     }
 
+    .navbar{
+        height: 10.5%;
+    }
+
     .navbar img{
         width: 40%;
+    }
+
+    .hamburger{
+        width: 8%;
+        height: 20%;
     }
     
 }
