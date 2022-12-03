@@ -6,6 +6,8 @@ function showFlash(){
     document.getElementById('heroVideoDiv').classList.toggle('active');
     document.getElementById('heroVideo').classList.toggle('active');
 
+    document.getElementById('heroVideo').play();
+
     warningScreen.remove();
     heroImage.remove();
 
