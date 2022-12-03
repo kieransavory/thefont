@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>THE FONT</title>
+        <meta name="description" content="The Font - 5 piece indie/alternative rock band based in Gloucestershire.">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="stylesheet.css">
+        <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+    </head>
+    <body>
+
+        <!-- FLASH PHOTOGRAPHY WARNING SCREEN - IMPORTANT. -->
+
+        <div id="warning" class="warning">
+            <div class="warningtext">
+                <h1><span style="font-weight: bold;">WARNING</span> - THIS WEBSITE SHOWS FLASH PHOTOGRAPHY.</h1>
+                <button onclick="showFlash();" id="showFlashButton"><span style="font-weight: bold;">SHOW</span> FLASH PHOTOGRAPHY</button>
+                <button onclick="hideFlash();" id="HideFlashButton"><span style="font-weight: bold;">HIDE</span> FLASH PHOTOGRAPHY</button>
+            </div>
+        </div>
+
+
+        <!-- NAVBAR -->
+        <nav class="navbar">
+            <img onclick="topScroll();" src="fontlogo.png" alt="The Font Logo">
+        </nav>
+        
+
+        <!-- HERO VIDEO DIV -->
+        <div id="heroVideoDiv" class="herovideo">
+            <video id="heroVideo" src="fontvideotrim.mp4" autoplay muted loop></video>
+        </div>
+
+        <!-- HERO IMAGE DIV -->
+        <div id="heroImageDiv" class="heroimgdiv">
+        </div>
+       
+        
+        <script src="script.js" async defer></script>
+    </body>
+</html>

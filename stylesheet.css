@@ -1,0 +1,178 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body{
+    background-color: black;
+}
+
+/* FLASH PHOTOGRAPHY WARNING - IMPORTANT. */
+
+.warning{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    background-color: black;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.warningtext{
+    text-align: center;
+}
+
+.warning h1{
+    animation: fadeIn 2s;
+    color: whitesmoke;
+    font-weight: 100;
+    letter-spacing: -1px;
+    margin: 10px;
+    font-size: 50px;
+}
+
+.warningtext button{
+    animation: fadeIn 2s;
+    transition: all 0.5s;
+    font-size: 25px;
+    margin: 50px;
+    padding: 10px;
+    background-color: black;
+    color: whitesmoke;
+    border: 1px solid whitesmoke;
+}
+
+.warningtext button:hover{
+    transition: all 0.5s;
+    transform: scale(1.025);
+    cursor: pointer;
+    background-color: whitesmoke;
+    color: black; 
+}
+
+/* Hero section styling for video shown */
+
+.herovideo{
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    top: 0;
+    left: 0;
+    display: none;
+}
+
+.herovideo video{
+    min-width: 100vw;
+    min-height: 100vh;
+
+    max-width: 100vw;
+    max-height: 100vh;
+
+    object-fit: cover;
+    object-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    filter: grayscale(1);
+    display: none;
+}
+
+.herovideo.active{
+    transition: all 0.5s;
+    display: flex;
+}
+
+.herovideo video.active{
+    transition: all 0.5s;
+    display: flex;
+}
+
+
+.heroimgdiv{
+    transition: all 0.5s;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url(heroimg.jpg);
+    background-position: center;
+    background-size: cover;
+    display: none;
+}
+
+.heroimgdiv.active{
+    display: flex;
+}
+
+/* NAVBAR STYLING */
+
+.navbar{
+    width: 100vw;
+    height: 12.5vh;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar img{
+    transition: all 0.5s;
+    width: 25%;
+}
+
+.navbar img:hover{
+    transition: all 0.5s;
+    transform: scale(1.075);
+    cursor: pointer;
+
+}
+
+
+
+
+
+
+@media screen and (max-width: 450px) {
+
+    .warning h1{
+        font-size: 40px;
+        margin: 30px;
+    }
+
+    .warningtext button{
+        margin: 10px;
+        padding: 25px;
+    }
+
+    .herovideo video{
+        object-position: center;
+    }
+
+    .navbar img{
+        width: 40%;
+    }
+    
+}
+
+
+
+
+
+
+
+@keyframes fadeIn {
+    from {opacity: 0}
+    to {opacity: 100%};   
+}
