@@ -112,7 +112,7 @@ body{
 }
 
 .heroimgdiv.active{
-    animation: fadeIn 1s;
+    animation: fadeIn 2s;
     display: flex;
 }
 
