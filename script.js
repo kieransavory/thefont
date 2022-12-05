@@ -27,5 +27,57 @@ function hideFlash() {
 
 
 function topScroll() {
+
     scrollTo(0,0);
+
+}
+
+
+function navSize() {
+
+//Check user device for mobile or non mobile.
+
+    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
+    const image = document.getElementById('navbarimage');
+    let scroll = window.scrollY;
+
+    if (!isMobile) {
+
+        if (scroll > 500) {
+            image.style.width = "10%";
+            image.style.opacity = "25%";
+            image.style.position = "absolute";
+            image.style.top = "10px";
+
+        } else if (scroll <= 500) {
+            image.style.width = "25%";
+            image.style.opacity = "100%";
+            image.style.position = "";
+            image.style.top = "";
+        }
+}  
+    if (isMobile) {
+         
+        if (scroll > 500) {
+            image.style.width = "25%";
+            image.style.opacity = "25%";
+            image.style.position = "absolute";
+            image.style.top = "10px";
+        } else if (scroll <= 500) {
+            image.style.width = "50%";
+            image.style.opacity = "100%";
+            image.style.position = "";
+            image.style.top = "";
+        }
+
+    }
+}
+
+function scrollToHeroTwo() {
+    
+    let heroTwo = document.getElementById('heroTwo').offsetTop;
+
+    scrollTo(0,heroTwo);
+
 }

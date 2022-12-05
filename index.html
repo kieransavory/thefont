@@ -9,28 +9,28 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="stylesheet.css">
         <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
-        <link rel="preload" href="fontvideotrim.mp4" as="video">
 
 
     </head>
-    <body>
+    <body onscroll="navSize();">
 
         <!-- FLASH PHOTOGRAPHY WARNING SCREEN - IMPORTANT. -->
 
         <div id="warning" class="warning">
             <div class="warningtext">
                 <h1><span style="font-weight: bold;">WARNING</span> - THIS WEBSITE SHOWS FLASH PHOTOGRAPHY.</h1>
-                <button onclick="showFlash();" id="showFlashButton"><span style="font-weight: bold;">SHOW</span> FLASH PHOTOGRAPHY</button>
-                <button onclick="hideFlash();" id="HideFlashButton"><span style="font-weight: bold;">HIDE</span> FLASH PHOTOGRAPHY</button>
+                <button aria-label="Show Flash Photography" onclick="showFlash();" id="showFlashButton"><span style="font-weight: bold;">SHOW</span> FLASH PHOTOGRAPHY</button>
+                <button aria-label="Hide Flash Photography" onclick="hideFlash();" id="HideFlashButton"><span style="font-weight: bold;">HIDE</span> FLASH PHOTOGRAPHY</button>
             </div>
         </div>
 
 
         <!-- NAVBAR -->
-        <nav class="navbar">
-            <img onclick="topScroll();" src="fontlogo.png" alt="The Font Logo">
+        <nav id="navbar" class="navbar">
 
-            <div class="hamburger">
+            <img id="navbarimage" onclick="topScroll();" src="fontlogo.png" alt="The Font Logo">
+
+            <div aria-label="Open Menu" tabindex="0" class="hamburger">
                 <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>
@@ -41,12 +41,33 @@
 
         <!-- HERO VIDEO DIV -->
         <div id="heroVideoDiv" class="herovideo">
+
             <video id="heroVideo" src="fontvideotrim.mp4"muted autoplay playsinline loop ></video>
+
+            <div class="buttoncontainer">
+                <button aria-label="Scroll To Next Page" onclick="scrollToHeroTwo();" class="downbutton"><span>&darr;</span></button>
+            </div>
+
         </div>
 
         <!-- HERO IMAGE DIV -->
         <div id="heroImageDiv" class="heroimgdiv">
+
+            <div class="buttoncontainer">
+                <button onclick="scrollToHeroTwo();" class="downbuttonlight"><span>&darr;</span></button>
+            </div>
+            
         </div>
+
+        <div id="heroTwo" class="shows"></div>
+
+
+
+
+
+
+
+
        
         
         <script src="script.js" async defer></script>
