@@ -7,6 +7,26 @@
     scroll-behavior: smooth;
 }
 
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+::-webkit-scrollbar-track {
+    background: #000000; 
+  }
+   
+ 
+::-webkit-scrollbar-thumb {
+    background: rgb(255, 255, 255); 
+  }
+  
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(188, 188, 188); 
+  }
+
+
+
 body{
     background-color: black;
     user-select: none;
@@ -22,7 +42,7 @@ body{
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 5;
+    z-index: 10;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -70,6 +90,76 @@ body{
     cursor: pointer;
     background-color: whitesmoke;
     color: black; 
+}
+
+
+
+.navmenu{
+    transition: all .5s;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: 5;
+    top: 0;
+    left: 100vw;
+    background-color: black;
+    display: flex;
+    visibility: hidden;
+    align-items: center;
+    justify-content: center;
+}
+
+.navmenu ul li {
+    transition: all .5s;
+    color: whitesmoke;
+    font-size: 70px;
+    font-weight: 100;
+    text-align: center;
+}
+
+.navmenu ul li:after {
+    display: block;
+    content: '';
+    border-bottom: solid 5px #fff;
+    transform: scaleX(0);
+    transition: transform .5s;
+}
+
+.navmenu ul li:hover {
+    transition: all .5s;
+    cursor: pointer;
+}
+
+.navmenu ul li:hover:after {
+    transform: scaleX(1);
+}
+
+.navmenu.active{
+    transition: all .85s;
+    position: fixed;
+    z-index: 5;
+    top: 0;
+    left: 0;
+    background-color: black;
+    display: flex;
+    visibility: visible;
+}
+
+.navmenu button{
+    transition: all .85s;
+    position: absolute;
+    background-color: transparent;
+    border: none;
+    color: whitesmoke;
+    font-size: 60px;
+    top: 5px;
+    right: 40px;
+}
+
+.navmenu button:hover{
+    transition: all .5s;
+    opacity: .5;
+    cursor: pointer;
 }
 
 
@@ -156,8 +246,8 @@ body{
 
 .downbutton:hover{
     transition: all .5s;
-    transform: scale(1.05);
-    background-color: rgba(103, 103, 103, 0.441);
+    transform: scale(1.075);
+    background-color: rgba(103, 103, 103, 0.521);
 }
 
 .downbutton span{
@@ -244,10 +334,23 @@ body{
 }
 
 
-.shows{
+.listen{
     width: 100vw;
     height: 100vh;
     background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.musiccontainer{
+    width: 30vw;
+    margin: 10px;
+    height: 50vh;
+    border: 1px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 

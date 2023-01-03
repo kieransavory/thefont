@@ -1,3 +1,4 @@
+//This function displays a div of a video if flash is selected.
 function showFlash(){
 
     let warningScreen = document.getElementById('warning');
@@ -13,6 +14,7 @@ function showFlash(){
 
 }
 
+//This function displays a div of a still image if no flash is selected.
 function hideFlash() {
 
     let warningScreen = document.getElementById('warning');
@@ -25,13 +27,16 @@ function hideFlash() {
 
 }
 
-
+//This function returns user to top of page.
 function topScroll() {
-
     scrollTo(0,0);
-
 }
 
+//Function to scroll to second hero section on desktop via down button.
+function scrollToHeroTwo() {
+    let heroTwo = document.getElementById('heroTwo').offsetTop;
+    scrollTo(0,heroTwo);
+}
 
 function navSize() {
 
@@ -42,11 +47,13 @@ function navSize() {
     const image = document.getElementById('navbarimage');
     let scroll = window.scrollY;
 
+//If is not mobile, desktop styling applies.
+
     if (!isMobile) {
 
         if (scroll > 500) {
             image.style.width = "10%";
-            image.style.opacity = "25%";
+            image.style.opacity = "50%";
             image.style.position = "absolute";
             image.style.top = "10px";
 
@@ -61,8 +68,9 @@ function navSize() {
          
         if (scroll > 500) {
             image.style.width = "25%";
-            image.style.opacity = "25%";
+            image.style.opacity = "100%";
             image.style.position = "absolute";
+            
             image.style.top = "10px";
         } else if (scroll <= 500) {
             image.style.width = "50%";
@@ -74,10 +82,19 @@ function navSize() {
     }
 }
 
-function scrollToHeroTwo() {
-    
-    let heroTwo = document.getElementById('heroTwo').offsetTop;
 
-    scrollTo(0,heroTwo);
 
+function openNavMenu() {
+    let menu = document.getElementById('navMenu');
+    menu.classList.toggle('active');
+}
+
+function homeMenuScroll() {
+    topScroll();
+    openNavMenu();
+}
+
+function listenMenuScroll() {
+    scrollToHeroTwo();
+    openNavMenu();
 }

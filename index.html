@@ -30,7 +30,7 @@
 
             <img id="navbarimage" onclick="topScroll();" src="fontlogo.png" alt="The Font Logo">
 
-            <div aria-label="Open Menu" tabindex="0" class="hamburger">
+            <div title="Open Menu" aria-label="Open Menu" tabindex="0" class="hamburger" onclick="openNavMenu();">
                 <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>
@@ -38,9 +38,20 @@
 
         </nav>
         
+        <!-- Navigational Menu -->
+        <section id="navMenu" class="navmenu">
+            <button onclick="openNavMenu();" aria-label="Close Menu" title="Close Menu" id="menuClose">&#x2715;</button>
+            <ul>
+                <li onclick="homeMenuScroll();">HOME</li>
+                <li onclick="listenMenuScroll();">LISTEN</li>
+                <li>GALLERY</li>
+                <li>SOCIALS</li>
+            </ul>
+        </section>
+        
 
         <!-- HERO VIDEO DIV -->
-        <div id="heroVideoDiv" class="herovideo">
+        <section id="heroVideoDiv" class="herovideo">
 
             <video id="heroVideo" src="fontvideotrim.mp4"muted autoplay playsinline loop ></video>
 
@@ -48,18 +59,22 @@
                 <button aria-label="Scroll To Next Page" onclick="scrollToHeroTwo();" class="downbutton"><span>&darr;</span></button>
             </div>
 
-        </div>
+        </section>
 
         <!-- HERO IMAGE DIV -->
-        <div id="heroImageDiv" class="heroimgdiv">
+        <section id="heroImageDiv" class="heroimgdiv">
 
             <div class="buttoncontainer">
                 <button onclick="scrollToHeroTwo();" class="downbuttonlight"><span>&darr;</span></button>
             </div>
             
-        </div>
+        </section>
 
-        <div id="heroTwo" class="shows"></div>
+        <section id="heroTwo" class="listen">
+            <div class="musiccontainer"></div>
+            <div class="musiccontainer"></div>
+        </section>
+
 
 
 
