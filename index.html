@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -30,7 +30,7 @@
 
             <img id="navbarimage" onclick="topScroll();" src="fontlogo.png" alt="The Font Logo">
 
-            <div title="Open Menu" aria-label="Open Menu" tabindex="0" class="hamburger" onclick="openNavMenu();">
+            <div title="Open Menu" aria-label="Open Menu" id="hamburger" class="hamburger" onclick="openNavMenu();">
                 <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>
@@ -43,7 +43,7 @@
             <button onclick="openNavMenu();" aria-label="Close Menu" title="Close Menu" id="menuClose">&#x2715;</button>
             <ul>
                 <li onclick="homeMenuScroll();">HOME</li>
-                <li onclick="listenMenuScroll();">LISTEN</li>
+                <li onclick="listenMenuScroll();">MUSIC</li>
                 <li>GALLERY</li>
                 <li>SOCIALS</li>
             </ul>
@@ -71,8 +71,49 @@
         </section>
 
         <section id="heroTwo" class="listen">
-            <div class="musiccontainer"></div>
-            <div class="musiccontainer"></div>
+
+            <div tabindex="0" title="Listen to Four Walls" id="fourWallsArt" onfocus="bgArtFourWalls();" onmouseenter="bgArtFourWalls();" onclick="modalActiveOne();" class="musiccontainer">
+                <span class="textspan">FOUR WALLS</span>
+            </div>
+
+            <div tabindex="0" title="Listen to Matador" id="matadorArt" onfocus="bgArtMatador();" onmouseenter="bgArtMatador();" onclick="modalActiveTwo();" class="musiccontainer single">
+                <span class="textspan">MATADOR</span>
+            </div>
+
+        </section>
+
+        <!-- Pop up modals for albums / single -->
+        <section id="listModalOne" class="listmodal">
+            <button onclick="modalActiveOne();" aria-label="Close Menu" title="Close Menu">&#x2715;</button>
+
+            <div class="modalcontent">
+                <img src="fourwallsbgcrop.jpg" alt="Four Walls EP Art">
+                <h3>FOUR WALLS</h3>
+                <ul>
+                    <a href="https://open.spotify.com/album/6VqtpHDk3GTVovahf8hJKq?si=QTV8HkveSbyvcUf69xU9jA" target="_blank"><li>SPOTIFY</li></a>
+                    <a href="https://music.apple.com/gb/album/four-walls-ep/1572589571" target="_blank"><li>APPLE MUSIC</li></a>
+                    <a href="https://soundcloud.com/thefont/sets/fourwalls?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing" target="_blank"><li>SOUNDCLOUD</li></a>
+                    <a href="https://deezer.page.link/jFjj2GATbuQAm8mp9" target="_blank"><li>DEEZER</li></a>
+                    <a href="https://youtube.com/playlist?list=OLAK5uy_nhSqaokm6gX6e4IcTAwhAHCmyhxDzWgUI" target="_blank"><li>YOUTUBE</li></a>
+                </ul>
+            </div>
+
+        </section>
+
+
+
+        <section id="listModalTwo" class="listmodal">
+            <button onclick="modalActiveTwo();" aria-label="Close Menu" title="Close Menu">&#x2715;</button>
+
+            <div class="modalcontent">
+                <img src="matadorart.jpg" alt="Matador Single Art">
+                <h3>MATADOR</h3>
+                <ul>
+                    <a href="https://open.spotify.com/album/0UUUh4a2ljz6AYa6A7tvv5?si=6n1IRgz8Qv6Bao9UxqedNA" target="_blank"><li>SPOTIFY</li></a>
+                    <a href="https://music.apple.com/gb/album/matador-single/1616868462" target="_blank"><li>APPLE MUSIC</li></a>
+                    <a href="https://deezer.page.link/msvvaycAq4byrmTu6" target="_blank"><li>DEEZER</li></a>
+                </ul>
+            </div>
         </section>
 
 

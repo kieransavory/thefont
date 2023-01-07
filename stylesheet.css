@@ -285,6 +285,7 @@ body{
 /* NAVBAR STYLING */
 
 .navbar{
+    transition: all .5s;
     width: 100vw;
     height: 12.5vh;
     position: fixed;
@@ -335,26 +336,164 @@ body{
 
 
 .listen{
+    position: relative;
     width: 100vw;
     height: 100vh;
     background-color: black;
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: all .5s;
+    background-position: center;
+    background-size: cover;
+    background-image: none;
+}
+
+.listen h2{
+    position: absolute;
+    letter-spacing: -3px;
+    top: 5px;
+    left: 5px;
+    font-weight: 100;
+    font-size: 45px;
+    color: whitesmoke;
 }
 
 .musiccontainer{
     width: 30vw;
     margin: 10px;
     height: 50vh;
-    border: 1px solid white;
+    background-image: url(fourwallsbgcrop.jpg);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
+.single{
+    background-image: url(matadorart.jpg);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.textspan{
+    transition: all .5s;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(3px) grayscale(100%);
+    color: whitesmoke;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
+    font-weight: 100;
+}
+
+.textspan:hover{
+    transition: all .5s;
+    cursor: pointer;
+    backdrop-filter: blur(0px) grayscale(0);
+    color: whitesmoke;
+    
+}
 
 
+.listmodal{
+    transition: all .5s; 
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    /* Z-index must not exceed 10. */
+    z-index: 7;
+    backdrop-filter: blur(10px);
+    display: none;
+}
+
+.listmodal.active{ 
+    z-index: 7;
+    transition: all .5s;
+    backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.listmodal button {
+    position: absolute;
+    background-color: transparent;
+    border: none;
+    color: whitesmoke;
+    font-size: 60px;
+    top: 5px;
+    right: 150px;
+    opacity: 1;
+}
+
+.listmodal button:hover{
+    opacity: .5;
+    cursor: pointer;
+}
+
+.modalcontent{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    width: 25vw;
+    height: 95vh;
+    background-image: linear-gradient(45deg, black, rgb(67, 67, 67));
+    position: relative;
+    border-radius: 1%;
+}
+
+.modalcontent h3{
+    color: whitesmoke;
+    font-size: 40px;
+    font-weight: 100;
+}
+
+.modalcontent a{
+    transition: all .5s; 
+    opacity: .5;
+    font-weight: 100;
+    font-size: 40px;
+    text-align: center;
+    color: whitesmoke;
+    text-decoration: none;
+}
+
+.modalcontent a:hover{
+    opacity: 1;
+    transition: all .5s; 
+}
+
+
+.modalcontent a:after {
+    display: block;
+    content: '';
+    border-bottom: solid 5px #fff;
+    transform: scaleX(0);
+    transition: transform .5s;
+}
+
+.modalcontent a:hover:after {
+    transform: scaleX(1);
+}
+
+.modalcontent img{
+    border-radius: 1%;
+    width: 90%;
+    height: 50%;
+}
 
 
 
