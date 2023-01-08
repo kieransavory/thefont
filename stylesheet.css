@@ -501,7 +501,7 @@ body{
 }
 
 
-
+/* MOBILE MEDIA QUERY */
 
 @media screen and (max-width: 450px) {
 
@@ -591,6 +591,59 @@ body{
         top: 1px;
         right: 5px;
     }
+}
+
+@media only screen and (min-width: 450px) and (max-width: 950px) {
+
+    .warning h1{
+        margin: 50px;
+    }
+
+    .warningtext button{
+        margin: 5px;
+        font-size: 28px;
+    }
+
+    .hamburger{
+        width: 7.5vw;
+    }
+
+    .downbutton{
+        width: 8vw;
+        height: 8vw;
+    }
+
+    .downbutton span{
+        font-size: 30px;
+    }
+
+    .textspan{
+        text-align: center;
+        font-size: 60px;
+    }
+
+    .listen{
+        flex-direction: column;
+    }
+
+    .musiccontainer{
+        width: 90vw;
+        height: 40vh;
+    }
+
+    .modalcontent{
+        width: 75vw;
+    }
+
+    .listmodal button{
+        right: 15px;
+    }
+
+    .modalcontent a{
+        font-size: 60px;
+    }
+
+
 }
 
 

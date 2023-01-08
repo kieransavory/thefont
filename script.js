@@ -71,7 +71,7 @@ function navSize() {
             
             image.style.top = "10px";
         } else if (scroll <= 500) {
-            image.style.width = "50%";
+            image.style.width = "40%";
             image.style.opacity = "100%";
             image.style.position = "";
             image.style.top = "";
