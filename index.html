@@ -12,11 +12,12 @@
 
 
     </head>
+
     <body onscroll="navSize();">
 
         <!-- FLASH PHOTOGRAPHY WARNING SCREEN - IMPORTANT. -->
 
-        <div id="warning" class="warning">
+        <div onload="isVisible();" id="warning" class="warning">
             <div class="warningtext">
                 <h1><span style="font-weight: bold;">WARNING</span> - THIS WEBSITE SHOWS FLASH PHOTOGRAPHY.</h1>
                 <button aria-label="Show Flash Photography" onclick="showFlash();" id="showFlashButton"><span style="font-weight: bold;">SHOW</span> FLASH PHOTOGRAPHY</button>
@@ -24,6 +25,10 @@
             </div>
         </div>
 
+
+
+
+        <div id="app" class="app">
 
         <!-- NAVBAR -->
         <nav id="navbar" class="navbar">
@@ -44,7 +49,7 @@
             <ul>
                 <li onclick="homeMenuScroll();">HOME</li>
                 <li onclick="listenMenuScroll();">MUSIC</li>
-                <li>GALLERY</li>
+                <li onclick="galleryMenuScroll();">GALLERY</li>
                 <li>SOCIALS</li>
             </ul>
         </section>
@@ -70,8 +75,11 @@
             
         </section>
 
+
+        <!-- SECOND SECTION -->
         <section id="heroTwo" class="listen">
 
+            <h2 id="ourMusic">OUR MUSIC</h2>
             <div tabindex="0" title="Listen to Four Walls" id="fourWallsArt" onfocus="bgArtFourWalls();" onmouseenter="bgArtFourWalls();" onclick="modalActiveOne();" class="musiccontainer">
                 <span class="textspan">FOUR WALLS</span>
             </div>
@@ -101,7 +109,7 @@
         </section>
 
 
-
+        <!-- Second pop up modal -->
         <section id="listModalTwo" class="listmodal">
             <button onclick="modalActiveTwo();" aria-label="Close Menu" title="Close Menu">&#x2715;</button>
 
@@ -116,9 +124,35 @@
             </div>
         </section>
 
+        <section id="gallery" class="gallery">
+
+            <h2 id="galleryHeading">GALLERY</h2>
+
+            <div class="gallerycontainer">
+              <img class="galleryImg" src="heroimg.jpg" alt="">   
+              <img class="galleryImg" src="heroimg.jpg" alt="">     
+              <img class="galleryImg" src="heroimg.jpg" alt="">   
+              <img class="galleryImg" src="heroimg.jpg" alt="">   
+              <img class="galleryImg" src="heroimg.jpg" alt="">   
+              <img class="galleryImg" src="heroimg.jpg" alt="">   
+              <img class="galleryImg" src="heroimg.jpg" alt="">   
+              <img class="galleryImg" src="heroimg.jpg" alt="">   
+              <img class="galleryImg" src="heroimg.jpg" alt="">   
+              <img class="galleryImg" src="heroimg.jpg" alt="">   
+              <img class="galleryImg" src="heroimg.jpg" alt="">   
+              <img class="galleryImg" src="heroimg.jpg" alt="">             
+            </div>
+
+
+        </section>
 
 
 
+
+
+
+
+    </div>
 
 
 

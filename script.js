@@ -3,15 +3,32 @@ function showFlash(){
 
     let warningScreen = document.getElementById('warning');
     let heroImage = document.getElementById('heroImageDiv');
+    let app = document.getElementById('app');
 
     document.getElementById('heroVideoDiv').classList.toggle('active');
     document.getElementById('heroVideo').classList.toggle('active');
 
     document.getElementById('heroVideo').play();
 
+//Removes display property previously applied by visibility check.
+    app.style.removeProperty('display');
+
     warningScreen.remove();
     heroImage.remove();
 
+}
+
+//Function checks visibility of warning element and adjusts style of body accordingly to mitigate overflow. 
+function isVisible() {
+
+    const warning = document.getElementById('warning');
+    const visibility = window.getComputedStyle(warning).visibility;
+    return visibility === 'visible';
+}
+
+if (isVisible('warning')) {
+    let app = document.getElementById('app');
+    app.style.display = "none";
 }
 
 //Function displays a div of a still image on landing page if no flash is selected.
@@ -19,8 +36,12 @@ function hideFlash() {
 
     let warningScreen = document.getElementById('warning');
     let heroVideo = document.getElementById('heroVideoDiv');
+    let app = document.getElementById('app');
 
     document.getElementById('heroImageDiv').classList.toggle('active');
+
+//Removes display property previously applied by visibility check.
+    app.style.removeProperty('display');
 
     warningScreen.remove();
     heroVideo.remove();
@@ -45,6 +66,7 @@ function navSize() {
 
     const image = document.getElementById('navbarimage');
     let scroll = window.scrollY;
+
 //Applies styling based on position of navbar relative to amount user has scrolled AND whether or not user is on mobile device or computer. 
 
     if (!isMobile) {
@@ -99,15 +121,25 @@ function listenMenuScroll() {
     openNavMenu();
 }
 
+//Function scrolls to gallery div.
+function galleryMenuScroll() {
+   scrollTo(0,document.getElementById('gallery').offsetTop);
+   openNavMenu();
+}
+
 //Function changes background art of listen div based on hover of child element. 
 function bgArtMatador() {
 
+    const title = document.getElementById('ourMusic');
     let divBackground = document.getElementById('heroTwo');
+    title.style.color = "crimson";
     divBackground.style.backgroundImage = "url(matadorbg.jpg)";
+    
     
     let matador = document.getElementById('matadorArt');
     matador.addEventListener('mouseleave', () => {
         divBackground.style.backgroundImage = "none";
+        title.style.color = "whitesmoke";
     })
 
 }
@@ -115,22 +147,27 @@ function bgArtMatador() {
 //Function changes background art of listen div based on hover of child element. 
 function bgArtFourWalls() {
 
+    const title = document.getElementById('ourMusic');
     let divBackground = document.getElementById('heroTwo');
+    title.style.color = "black";
     divBackground.style.backgroundImage = "url(fourwallsbg2.jpg)";
 
     
     let fourWalls = document.getElementById('fourWallsArt');
     fourWalls.addEventListener('mouseleave', () => {
+        title.style.color = "whitesmoke";
         divBackground.style.backgroundImage = "none";
     })
 
 }
 
+// Activate or deactivate modal based on user input.
 function modalActiveOne() {
     let modal = document.getElementById('listModalOne');
     modal.classList.toggle('active');
 }
 
+// Activate or deactivate modal based on user input.
 function modalActiveTwo() {
     let modal = document.getElementById('listModalTwo');
     modal.classList.toggle('active');

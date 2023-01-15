@@ -32,20 +32,22 @@ body{
     user-select: none;
 }
 
+
 /* FLASH PHOTOGRAPHY WARNING - IMPORTANT. */
 
 .warning{
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     position: fixed;
     background-color: black;
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 10;
+    z-index: 1000;
     display: flex;
     align-items: center;
     justify-content: center;
+    visibility: visible;
 }
 
 .warningtext{
@@ -92,7 +94,7 @@ body{
     color: black; 
 }
 
-
+/* Navbar styling */
 
 .navmenu{
     transition: all .5s;
@@ -334,6 +336,8 @@ body{
     background-color: whitesmoke;
 }
 
+/* SECOND SECTION OF PAGE - MUSIC */
+
 
 .listen{
     position: relative;
@@ -350,12 +354,13 @@ body{
 }
 
 .listen h2{
+    transition: all .5s;
     position: absolute;
-    letter-spacing: -3px;
+    letter-spacing: 5px;
     top: 5px;
     left: 5px;
-    font-weight: 100;
-    font-size: 45px;
+    font-weight: bold;
+    font-size: 20px;
     color: whitesmoke;
 }
 
@@ -503,6 +508,53 @@ body{
 }
 
 
+/* Image gallery styling */
+
+.gallery{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all .5s;
+    background-position: center;
+    background-size: cover;
+    background-image: none;
+}
+
+.gallery h2{
+    transition: all .5s;
+    position: absolute;
+    letter-spacing: 5px;
+    top: 5px;
+    left: 5px;
+    font-weight: bold;
+    font-size: 20px;
+    color: whitesmoke;
+}
+
+.gallerycontainer{
+    width: 70vw;
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.galleryImg{
+    width: 100%;
+    height: auto;
+    margin: 5px;
+}
+
+
+
 /* MOBILE MEDIA QUERY */
 
 @media screen and (max-width: 450px) {
@@ -583,6 +635,11 @@ body{
         flex-direction: column;
     }
 
+    .listen h2{
+        font-size: 10px;
+        margin: 5px;
+    }
+
     .musiccontainer{
         height: 40vh;
         width: 90vw;
@@ -610,6 +667,16 @@ body{
         font-size: 30px;
         top: 1px;
         right: 5px;
+    }
+    
+    .gallery h2{
+        font-size: 10px;
+        margin: 5px;
+    }
+    
+    .gallerycontainer{
+        width: 95vw;
+        height: 80%;
     }
 }
 
