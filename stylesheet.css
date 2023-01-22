@@ -548,9 +548,18 @@ body{
 }
 
 .galleryImg{
+    transition: all .5s;
     width: 100%;
     height: auto;
-    margin: 5px;
+    margin: 15px;
+    filter: grayscale(1);
+}
+
+.galleryImg:hover{
+    transition: all .5s;
+    transform: scale(1.02);
+    filter: grayscale(0);
+    cursor: pointer;
 }
 
 
@@ -678,9 +687,13 @@ body{
         width: 95vw;
         height: 80%;
     }
+
+    .galleryImg{
+        filter: grayscale(0);
+    }
 }
 
-@media only screen and (min-width: 450px) and (max-width: 950px) {
+@media  only screen and (min-width: 450px) and (max-width: 950px) {
 
     .warning h1{
         margin: 50px;
@@ -729,6 +742,16 @@ body{
     .modalcontent a{
         font-size: 60px;
     }
+
+    .galleryImg{
+        filter: grayscale(0);
+    }
+
+
+
+
+
+    
 
 
 }
