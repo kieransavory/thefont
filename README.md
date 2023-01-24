@@ -8,4 +8,4 @@ https://kieransavory.github.io/thefont/
 
 - It is possible to return a boolean based on a computed style value. </br>
 - Further experience creating responsive image galleries using flexbox. </br>
-- Experience in displaying various content for the purposes of user safety by DOM manipulation. </br> 
+- Conditionally rendering items for the purposes of user safety by DOM manipulation. </br>
